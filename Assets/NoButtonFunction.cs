@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class NoButtonFunction : MonoBehaviour {
     public GameObject yesButton;
-    public TextMesh yesText;
-    public TextMesh noText;
+    public TextMesh[] allTextMeshes;
     public GameObject textField;
 	// Use this for initialization
 	void Start () {
         yesButton = GameObject.Find("YesButton(Clone)");
         textField = GameObject.Find("Textfield(Clone)");
+        allTextMeshes =(TextMesh[]) FindObjectsOfType(typeof(TextMesh));
 	}
 	
 	// Update is called once per frame
@@ -20,9 +20,11 @@ public class NoButtonFunction : MonoBehaviour {
     void OnMouseUpAsButton()
     {
         Destroy(yesButton);
-        Destroy(yesText);
-        Destroy(noText);
         Destroy(textField);
+        Destroy(allTextMeshes[0]);
+        Destroy(allTextMeshes[1]);
+        Destroy(allTextMeshes[2]);
         Destroy(gameObject);
+
     }
 }
