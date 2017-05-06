@@ -21,10 +21,11 @@ public class NoButtonFunction : MonoBehaviour {
     {
         Destroy(yesButton);
         Destroy(textField);
-        Destroy(allTextMeshes[0]);
-        Destroy(allTextMeshes[1]);
-        Destroy(allTextMeshes[2]);
+        Destroy(allTextMeshes[0].gameObject);
+        Destroy(allTextMeshes[1].gameObject);
+        Destroy(allTextMeshes[2].gameObject);
         Destroy(gameObject);
+        PersonClick.alreadyClicked = false;
 
     }
 }
