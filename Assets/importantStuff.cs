@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class importantStuff : MonoBehaviour {
-    public static int chooser = 0;
+    public int chooser;
+    public int choossser;
     public GameObject suspectGeneral;
     public GameObject suspectLady;
     public GameObject suspectProfessor;
@@ -18,6 +19,7 @@ public class importantStuff : MonoBehaviour {
     void Start () {
         spawnPoints = new Vector3[3];
         chooser = (int)Random.Range(0, 3);
+        choossser = chooser;
         if (chooser == 2)
         {
             suspectGeneral.GetComponent<PersonClick>().isMurderer = true;
@@ -31,9 +33,9 @@ public class importantStuff : MonoBehaviour {
             suspectProfessor.GetComponent<PersonClick>().isMurderer = true;
         }
 
-        spawnPoints[0] = new Vector3(2.1f, .3f, 0);
+        spawnPoints[2] = new Vector3(2.1f, .3f, 0);
         spawnPoints[1] = new Vector3(-2.4f, .6f, 0);
-        spawnPoints[2] = new Vector3(-3.7f, -1.8f, 0);
+        spawnPoints[0] = new Vector3(-3.7f, -1.8f, 0);
         rand1 = Random.Range(0, 3);
         rand2 = Random.Range(0, 3);
         while (rand2 == rand1)
@@ -57,6 +59,6 @@ public class importantStuff : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+        Debug.Log(chooser);
 	}
 }

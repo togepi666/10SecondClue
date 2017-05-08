@@ -10,7 +10,7 @@ public class PersonClick : MonoBehaviour {
     public TextMesh yesText;
     public TextMesh noText;
     public static bool alreadyClicked = false;
-    public bool isMurderer = false;
+    public bool isMurderer;
     public int personClicked;
 
 
