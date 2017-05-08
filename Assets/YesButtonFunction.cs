@@ -13,7 +13,7 @@ public class YesButtonFunction : MonoBehaviour {
         noButton = GameObject.Find("NoButton(Clone)");
         textField = GameObject.Find("Textfield(Clone)");
         allTextMeshes = (TextMesh[])FindObjectsOfType(typeof(TextMesh));
-        if(personClicked == 0)
+        if(personClicked == 2)
         {
             personClickedOn = GameObject.Find("generalguy");
         }
@@ -21,7 +21,7 @@ public class YesButtonFunction : MonoBehaviour {
         {
             personClickedOn = GameObject.Find("prettylady");
         }
-        if(personClicked == 2)
+        if(personClicked == 0)
         {
             personClickedOn = GameObject.Find("professor");
         }
@@ -35,7 +35,7 @@ public class YesButtonFunction : MonoBehaviour {
     {
         if(personClickedOn.GetComponent<PersonClick>().isMurderer)
         {
-            SceneManager.LoadScene("transitionScene");
+            SceneManager.LoadScene("Win");
         }
         else
         {

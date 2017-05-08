@@ -23,7 +23,7 @@ public class PersonClick : MonoBehaviour {
     void Update () {
 		
 	}
-    void OnMouseUpAsButton()
+    public void OnMouseUpAsButton()
     {
         if (alreadyClicked == false)
         {

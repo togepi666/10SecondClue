@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class importantStuff : MonoBehaviour {
-    public int chooser = 0;
+    public static int chooser = 0;
     public GameObject suspectGeneral;
     public GameObject suspectLady;
     public GameObject suspectProfessor;
@@ -18,7 +18,7 @@ public class importantStuff : MonoBehaviour {
     void Start () {
         spawnPoints = new Vector3[3];
         chooser = (int)Random.Range(0, 3);
-        if (chooser == 0)
+        if (chooser == 2)
         {
             suspectGeneral.GetComponent<PersonClick>().isMurderer = true;
         }
@@ -26,7 +26,7 @@ public class importantStuff : MonoBehaviour {
         {
             suspectLady.GetComponent<PersonClick>().isMurderer = true;
         }
-        if (chooser == 2)
+        if (chooser == 0)
         {
             suspectProfessor.GetComponent<PersonClick>().isMurderer = true;
         }
